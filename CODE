@@ -1,0 +1,15 @@
+Sub PrintPDA()
+
+ For n = 3 To 28
+
+ 
+ Sheet2.Range("EMPLOYEEID").Value = Sheet1.Cells(n, "A")
+
+ Sheet2.ExportAsFixedFormat xlTypePDF, "C:\Users\HP\Desktop\Payslip/" & Sheet2.Range("EMPLOYEEID").Value & "-" & Sheet2.Range("EMPLOYEENAME").Value & ".pdf", , , False, , , False
+
+ Next
+
+MsgBox "PDF Files has been generated"
+
+End Sub
+
